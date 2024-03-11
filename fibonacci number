@@ -1,0 +1,13 @@
+def generate_fibonacci_numbers(limit):
+    fibonacci_numbers = [0, 1]
+    while fibonacci_numbers[-1] + fibonacci_numbers[-2] <= limit:
+        fibonacci_numbers.append(fibonacci_numbers[-1] + fibonacci_numbers[-2])
+    return fibonacci_numbers
+
+# Test the function
+limit = int(input("Enter the limit: "))
+if limit < 0:
+    print("Please enter a non-negative limit.")
+else:
+    fibonacci_numbers = generate_fibonacci_numbers(limit)
+    print("Fibonacci numbers up to", limit, "are:", fibonacci_numbers)
